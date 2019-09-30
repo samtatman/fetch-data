@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header'
+import Form from './Components/Form'
+import * as api from './fetchFunctions'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+  state = {
+    cities: []
+  }
+  addCity = (city) => {
+    this.setState(currentState => {
+      return [city, ...currentState.cities]
+    })
+  }
+  componentDidMount() {
+    api.getWeather()
+      .then(res => this.setState({ res }))
+  }
+  render() {
+    console.log(this.state)
+    return (
+      <div>
+        <Header />
+        <Form addCity={this.addCity} />
+      </div>
+    )
+
+  }
+
 }
 
 export default App;

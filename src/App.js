@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './Components/Header'
 import Form from './Components/Form'
-import * as api from './fetchFunctions'
+import List from './Components/List'
 
 
 class App extends React.Component {
@@ -11,19 +11,17 @@ class App extends React.Component {
   }
   addCity = (city) => {
     this.setState(currentState => {
-      return [city, ...currentState.cities]
+      return {cities: [city, ...currentState.cities]}
     })
   }
-  componentDidMount() {
-    api.getWeather()
-      .then(res => this.setState({ res }))
-  }
+
   render() {
     console.log(this.state)
     return (
       <div>
         <Header />
         <Form addCity={this.addCity} />
+        <List cities ={this.state.cities} />
       </div>
     )
 

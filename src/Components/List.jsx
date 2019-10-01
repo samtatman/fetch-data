@@ -11,9 +11,9 @@ class List extends React.Component {
         const {cities} = this.props
         return (
             <ul>
-          {cities.map(city => {
+          {cities.map((city, i) => {
               return (
-    <CityCard key= {city} city = {city}/> )
+    <CityCard key= {city} city = {city} index={i}/> )
 })}  
 </ul>
             )

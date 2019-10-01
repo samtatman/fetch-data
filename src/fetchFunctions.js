@@ -1,5 +1,5 @@
 import axios from 'axios'
-const APIKEY = '4ddc41225fe319768d3bbc7ffd07412f';
+const APIKEY = '0f57a1f3c5014cc4b254f888f22c32b9';
 
 
 export function getWeather(city) {

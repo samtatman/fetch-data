@@ -8,13 +8,15 @@ class CityCard extends React.Component {
 componentDidMount () {
     const {city} = this.props
      api.getWeather(city).then(({data}) => {
-    this.setState({weather:`City: ${data.name}, Temp: ${data.main.temp - 273} oC, Weather: ${data.weather[0].main} `})
+    this.setState({weather:`${data.name}, ${Math.round(data.main.temp - 273)} ºC, ${data.weather[0].main} `})
      
 })
 }
 
 render () {
-    return (<li>{this.state.weather}</li>)
+    const {index} = this.props
+    const ref = ['middle-left', 'middle-centre', 'middle-right', 'bottom-left', 'bottom-centre', 'bottom-right']
+    return (<li className='main' id={ref[index]}>{this.state.weather}</li>)
 
 }
 }

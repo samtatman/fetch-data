@@ -1,18 +1,69 @@
-.App {
-  text-align: center;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-color: black;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.title {
   color: white;
+  background-color: gray;
+  border-radius: 10px;
+  opacity: 1;
+  text-align: center;
+  font-family: sans-serif;
+  grid-column: 1 / 4;
+  grid-row: 1;
 }
 
-.App-link {
-  color: #09d3ac;
+.main {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  background-color: gray;
+  list-style: none;
+}
+
+ul {
+  grid-column: 1/4;
+  grid-row: 2/4;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#middle-left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#middle-centre {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#middle-right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#bottom-left {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#bottom-centre {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#bottom-right {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.clear {
+  background-image: url("https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjEtofAmfvkAhWOyYUKHXNzBQ8QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fmemes%2Fcomments%2Fb476hd%2Fstan_lee_watching_everyone_talk_about_ant_man%2F&psig=AOvVaw1Bc_-8ffSEDHXlfp_pn2PK&ust=1570024047302295");
+}
+
+.rain {
+  background-image: url("https://memegenerator.net/img/images/13744103/kermit-rain-window.jpg");
 }

@@ -1,18 +1,41 @@
+html {
+  height: 100%;
+  cursor: crosshair;
+}
+
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
 .grid-container {
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  background-color: black;
+  background-image: url("https://www.freewebheaders.com/wp-content/gallery/clouds-sky/clouds-sky-header-2065-1024x300.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .title {
   color: white;
-  background-color: gray;
-  border-radius: 10px;
+  background-color: black;
+  border-radius: 50%;
   opacity: 1;
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Raleway", sans-serif;
   grid-column: 1 / 4;
   grid-row: 1;
+  height: max-content;
+  margin-right: 20%;
+  margin-left: 20%;
+  width: 60%;
+  align-self: center;
+  padding-bottom: 5%;
+  box-sizing: border-box;
+  cursor: crosshair;
 }
 
 .main {
@@ -21,49 +44,105 @@
   text-align: center;
   background-color: gray;
   list-style: none;
+  font-size: large;
+  border-radius: 10px;
 }
 
 ul {
+  display: grid;
   grid-column: 1/4;
   grid-row: 2/4;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  box-sizing: border-box;
+}
+
+form {
+  background-color: gray;
+  margin-left: 30%;
+  margin-right: 30%;
+  border-radius: 10px;
+}
+
+label {
+  font-size: xx-large;
+  box-sizing: border-box;
+}
+
+input {
+  background-color: black;
+  box-sizing: border-box;
+  border: 1px solid darkslategrey;
+  color: white;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border-color: darkslategrey;
+  font-family: "Raleway" sans-serif;
+  display: inline-block;
+  box-sizing: border-box;
 }
 
 #middle-left {
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 1;
+  box-sizing: border-box;
 }
 
 #middle-centre {
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 #middle-right {
   grid-column: 3;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 #bottom-left {
   grid-column: 1;
-  grid-row: 3;
+  grid-row: 2;
 }
 
 #bottom-centre {
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 2;
 }
 
 #bottom-right {
   grid-column: 3;
-  grid-row: 3;
+  grid-row: 2;
 }
 
-.clear {
-  background-image: url("https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjEtofAmfvkAhWOyYUKHXNzBQ8QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fmemes%2Fcomments%2Fb476hd%2Fstan_lee_watching_everyone_talk_about_ant_man%2F&psig=AOvVaw1Bc_-8ffSEDHXlfp_pn2PK&ust=1570024047302295");
+.Rain {
+  background-image: url("https://media.giphy.com/media/rsLsc0Enb9SHS/giphy.gif");
+  background-size: contain;
+  background-repeat: round;
+  height: 100%;
+  padding: 10%;
+  border-radius: inherit;
+}
+.Clear {
+  background-image: url("https://media3.giphy.com/media/l3vR7aXoQX0OdHi48/200.webp?cid=790b761185bfe41c6bb958e903551248c13203540877b164&rid=200.webp");
+  background-size: contain;
+  background-repeat: round;
+  size: inherit;
+  height: 100%;
+  padding: 10%;
+  border-radius: inherit;
 }
 
-.rain {
-  background-image: url("https://memegenerator.net/img/images/13744103/kermit-rain-window.jpg");
+p {
+  box-sizing: border-box;
+  size: inherit;
+}
+.top {
+  margin: 0%;
+}
+
+.bottom {
+  margin: 0%;
 }

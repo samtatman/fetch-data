@@ -17,9 +17,9 @@ class Form extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label> City :
+        <label> City <br></br>
           <input type='text' name='city' onChange={this.handleChange} value={this.state.input} />
-          <button type='submit'>Get Weather</button>
+          <br></br><button type='submit'>Get Weather</button>
         </label>
       </form>
     );
